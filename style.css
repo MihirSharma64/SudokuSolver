@@ -5,6 +5,7 @@ body {
 .sudoku-container,
 .visualizer-container {
 	width: 500px;
+	margin: auto;
 }
 
 /* .col {
@@ -13,6 +14,9 @@ body {
 	height: 50px;
 } */
 
+.custom {
+	border-top: 5px solid orange;
+}
 .row-3,
 .row-6,
 .row-9 {
@@ -24,10 +28,6 @@ body {
 }
 .border-right {
 	border-right: 5px solid orange;
-}
-
-.border-top {
-	border-top: 5px solid orange;
 }
 
 .col:hover {
@@ -60,4 +60,33 @@ p {
 
 body {
 	background-color: #171717;
+}
+
+.button-container {
+	width: 100%;
+}
+
+.input-div {
+	width: 174px;
+	height: 20px;
+	padding: 12px 6px 12px 6px;
+	margin-top: 10px;
+}
+.delay {
+	width: 100%;
+	height: 30px;
+	font-size: 20px;
+	color: black;
+}
+
+input {
+	color: red;
+}
+
+.green{
+	color: green;
+}
+
+.visualizer-container{
+	margin-top: 110px;
 }
