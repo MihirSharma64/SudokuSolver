@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <div class="container-fluid">
+           <a class="navbar-brand" href="#">SudokuSolver</a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
+                 <a class="nav-link active" aria-current="page" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" href="#">Link</a>
+               </li>
+               <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   Dropdown
+                 </a>
+                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <li><a class="dropdown-item" href="#">Action</a></li>
+                   <li><a class="dropdown-item" href="#">Another action</a></li>
+                   <li><hr class="dropdown-divider"></li>
+                   <li><a class="dropdown-item" href="#">Something else here</a></li>
+                 </ul>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+               </li>
+             </ul>
+             <form class="d-flex">
+               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-success" type="submit">Search</button>
+             </form>
+           </div>
+         </div>
+       </nav>
+		<div class="container">
+			<div class="sudoku-container mt-5 m-5">
+				<div class="row">
+					<input id="0" class="col" type="text" />
+					<input id="1" class="col" type="text" />
+					<input id="2" class="col" type="text" />
+					<input id="3" class="col" type="text" />
+					<input id="4" class="col" type="text" />
+					<input id="5" class="col" type="text" />
+					<input id="6" class="col" type="text" />
+					<input id="7" class="col" type="text" />
+					<input id="8" class="col" type="text" />
+				</div>
+				<div class="row">
+               <input id="9" class="col" type="text" />
+					<input id="10" class="col" type="text" />
+					<input id="11" class="col" type="text" />
+					<input id="12" class="col" type="text" />
+					<input id="13" class="col" type="text" />
+					<input id="14" class="col" type="text" />
+					<input id="15" class="col" type="text" />
+					<input id="16" class="col" type="text" />
+					<input id="17" class="col" type="text" />
+				</div>
+				<div class="row">
+               <input id="18" class="col" type="text" />
+					<input id="19" class="col" type="text" />
+					<input id="20" class="col" type="text" />
+					<input id="21" class="col" type="text" />
+					<input id="22" class="col" type="text" />
+					<input id="23" class="col" type="text" />
+					<input id="24" class="col" type="text" />
+					<input id="25" class="col" type="text" />
+					<input id="26" class="col" type="text" />
+				</div>
+				<div class="row">
+               <input id="27" class="col" type="text" />
+               <input id="28" class="col" type="text" />
+               <input id="29" class="col" type="text" />
+               <input id="30" class="col" type="text" />
+					<input id="31" class="col" type="text" />
+					<input id="32" class="col" type="text" />
+					<input id="33" class="col" type="text" />
+					<input id="34" class="col" type="text" />
+					<input id="35" class="col" type="text" />
+				</div>
+				<div class="row">
+               <input id="36" class="col" type="text" />
+               <input id="37" class="col" type="text" />
+               <input id="38" class="col" type="text" />
+               <input id="39" class="col" type="text" />
+               <input id="40" class="col" type="text" />
+					<input id="41" class="col" type="text" />
+					<input id="42" class="col" type="text" />
+					<input id="43" class="col" type="text" />
+					<input id="44" class="col" type="text" />
+				</div>
+				<div class="row">
+               <input id="45" class="col" type="text" />
+               <input id="46" class="col" type="text" />
+               <input id="47" class="col" type="text" />
+               <input id="48" class="col" type="text" />
+               <input id="49" class="col" type="text" />
+					<input id="50" class="col" type="text" />
+					<input id="51" class="col" type="text" />
+					<input id="52" class="col" type="text" />
+					<input id="53" class="col" type="text" />
+				</div>
+				<div class="row">
+               <input id="54" class="col" type="text" />
+               <input id="55" class="col" type="text" />
+               <input id="56" class="col" type="text" />
+               <input id="57" class="col" type="text" />
+               <input id="58" class="col" type="text" />
+               <input id="59" class="col" type="text" />
+					<input id="60" class="col" type="text" />
+					<input id="61" class="col" type="text" />
+					<input id="62" class="col" type="text" />
+				</div>
+				<div class="row">
+               <input id="63" class="col" type="text" />
+					<input id="64" class="col" type="text" />
+					<input id="65" class="col" type="text" />
+					<input id="66" class="col" type="text" />
+					<input id="67" class="col" type="text" />
+					<input id="68" class="col" type="text" />
+					<input id="69" class="col" type="text" />
+					<input id="70" class="col" type="text" />
+					<input id="71" class="col" type="text" />
+				</div>
+				<div class="row">
+               <input id="72" class="col" type="text" />
+					<input id="73" class="col" type="text" />
+					<input id="74" class="col" type="text" />
+					<input id="75" class="col" type="text" />
+					<input id="76" class="col" type="text" />
+					<input id="77" class="col" type="text" />
+					<input id="78" class="col" type="text" />
+					<input id="79" class="col" type="text" />
+					<input id="80" class="col" type="text" /> 
+				</div>
+            <div class="button-container d-flex justify-content-around">
+               <button class="btn btn-success solve">Solve</button>
+               <button class="btn btn-danger reset">Reset</button>
+            </div>
+			</div>
+
+         <div class="visualizer-container">
+            <div class="row">
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+				</div>
+				<div class="row">
+               <input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+				</div>
+				<div class="row">
+               <input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+				</div>
+				<div class="row">
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+				</div>
+				<div class="row">
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+				</div>
+				<div class="row">
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+				</div>
+				<div class="row">
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+               <input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+				</div>
+				<div class="row">
+               <input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+				</div>
+				<div class="row">
+               <input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" />
+					<input class="col" type="text" /> 
+				</div>
+            <div class="button-container d-flex justify-content-around">
+               <button class="btn btn-success visualize">Visualize!</button>
+            </div>
+         </div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
