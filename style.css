@@ -8,12 +8,6 @@ body {
 	margin: auto;
 }
 
-/* .col {
-	border: solid 1px red;
-	width: 20px;
-	height: 50px;
-} */
-
 .custom {
 	border-top: 5px solid orange;
 }
@@ -36,6 +30,7 @@ body {
 input {
 	text-align: center;
 	font-size: 30px;
+	font-weight: bold;
 }
 
 button {
@@ -83,11 +78,11 @@ input {
 	color: red;
 }
 
-.green{
+.green {
 	color: green;
 }
 
-.visualizer-container{
+.visualizer-container {
 	margin-top: 180px;
 	margin-bottom: 100px;
 }
