@@ -1,11 +1,33 @@
-.sudoku-container {
+body {
+	box-sizing: border-box;
+}
+
+.sudoku-container,
+.visualizer-container {
 	width: 500px;
 }
 
-.col {
-	border: solid 1px black;
-   width: 20px;
+/* .col {
+	border: solid 1px red;
+	width: 20px;
 	height: 50px;
+} */
+
+.row-3,
+.row-6,
+.row-9 {
+	border-bottom: 5px solid orange;
+}
+
+.border-left {
+	border-left: 5px solid orange;
+}
+.border-right {
+	border-right: 5px solid orange;
+}
+
+.border-top {
+	border-top: 5px solid orange;
 }
 
 .col:hover {
@@ -13,10 +35,29 @@
 }
 input {
 	text-align: center;
-   font-size: 30px;
+	font-size: 30px;
 }
 
-button{
-   width: 40%;
-   margin-top: 20px;
+button {
+	width: 40%;
+	margin-top: 20px;
+}
+.heading-container {
+	justify-self: center;
+	font-size: 30px;
+}
+
+nav {
+	height: 60px;
+}
+
+p {
+	font-size: 20px;
+}
+.col {
+	background-color: #cdf0ea;
+}
+
+body {
+	background-color: #171717;
 }

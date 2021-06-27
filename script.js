@@ -131,14 +131,15 @@ resetbtn.addEventListener('click', function () {
 });
 
 let visualizerbtn = document.querySelector('.visualize');
-
+let delay = 0;
+let visualize = async () => {
+	delay = document.querySelector(".delay").value;
+	console.log('HI');
+	await func2(input, 0, 0);
+};
 visualizerbtn.addEventListener('click', visualize);
 
-function visualize() {
-	console.log('HI');
-	func2(input, 0, 0);
-}
-function func2(board, row, col) {
+let func2 = async (board, row, col) => {
 	if (row == 9) {
 		return true;
 	}
@@ -154,25 +155,42 @@ function func2(board, row, col) {
 	}
 
 	if (board[row][col] != 0) {
-		tempans = func2(board, nextrow, nextcol);
+		tempans = await func2(board, nextrow, nextcol);
 		return tempans;
 	} else {
 		for (let i = 1; i <= 9; i++) {
+			let cellNo = row * 9 + col;
+			await updateVal(cellNo,i);
 			if (canBePlaced2(board, row, col, i)) {
 				board[row][col] = i;
-				let cellNo = row * 9 + col;
-				boxes2[cellNo].value = i;
-				tempans = func2(board, nextrow, nextcol);
+
+				// boxes2[cellNo].value = i;
+				// await updateVal(cellNo, i);
+				tempans = await func2(board, nextrow, nextcol);
 				if (tempans == true) {
 					return true;
 				}
 				board[row][col] = 0;
 				boxes2[cellNo].value = '';
 			}
+			await updateVal(cellNo, 0);
 		}
 	}
 	return false;
-}
+};
+
+const updateVal = async (cellNo, val) => {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			if (val == 0) {
+				boxes2[cellNo].value = '';
+			} else {
+				boxes2[cellNo].value = val;
+			}
+			resolve();
+		}, delay);
+	});
+};
 
 function canBePlaced2(board, row, col, n) {
 	for (let j = 0; j < 9; j++) {
