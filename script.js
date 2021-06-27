@@ -12,7 +12,6 @@ for (let i = 0; i < 9; i++) {
 		solutionarr[i][j] = 0;
 	}
 }
-let flag = false;
 let boxes = document.querySelectorAll('.sudoku-container input');
 let boxes2 = document.querySelectorAll('.visualizer-container input');
 
@@ -136,14 +135,12 @@ let visualizerbtn = document.querySelector('.visualize');
 visualizerbtn.addEventListener('click', visualize);
 
 function visualize() {
+	console.log('HI');
 	func2(input, 0, 0);
 }
-
 function func2(board, row, col) {
 	if (row == 9) {
-		window.setTimeout(() => {
-			return true;
-		}, 1000);
+		return true;
 	}
 
 	let nextrow = row;
@@ -157,31 +154,23 @@ function func2(board, row, col) {
 	}
 
 	if (board[row][col] != 0) {
-		// some number is already placed
-		window.setTimeout(() => {
-			tempans = func2(board, nextrow, nextcol);
-			return tempans;
-		}, 1000);
+		tempans = func2(board, nextrow, nextcol);
+		return tempans;
 	} else {
-		// box is empty, so try to place something
-
 		for (let i = 1; i <= 9; i++) {
-			window.setTimeout(() => {
-				if (canBePlaced2(board, row, col, i)) {
-					board[row][col] = i;
-					let cellNo = row * 9 + col;
-					boxes2[cellNo].value = i;
-					tempans = func2(board, nextrow, nextcol);
-					if (tempans) {
-						return true;
-					}
-					board[row][col] = 0;
-					boxes2[cellNo].value = '';
+			if (canBePlaced2(board, row, col, i)) {
+				board[row][col] = i;
+				let cellNo = row * 9 + col;
+				boxes2[cellNo].value = i;
+				tempans = func2(board, nextrow, nextcol);
+				if (tempans == true) {
+					return true;
 				}
-			}, 1000);
+				board[row][col] = 0;
+				boxes2[cellNo].value = '';
+			}
 		}
 	}
-
 	return false;
 }
 
